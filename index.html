@@ -46,21 +46,22 @@
 <body class="bg-primary-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-primary-100">
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-primary-100">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center group">
                     <img src="assets/logo.png" alt="Logo"
-                        class="h-12 w-12 rounded-full object-cover shadow-md group-hover:scale-105 transition">
+                        class="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover shadow-md group-hover:scale-105 transition">
                     <div class="ml-3">
-                        <div class="text-xl font-bold text-primary-800 leading-none">SAMBHAV</div>
-                        <div class="text-xs text-primary-600 tracking-[0.2em] font-medium mt-1">EXPORT</div>
+                        <div class="text-lg md:text-xl font-bold text-primary-800 leading-none">SAMBHAV</div>
+                        <div class="text-[0.6rem] md:text-xs text-primary-600 tracking-[0.2em] font-medium mt-1">
+                            EXPORTER</div>
                     </div>
                 </a>
 
                 <!-- Desktop Links -->
-                <div class="hidden md:flex space-x-8">
+                <div class="hidden md:flex space-x-8 items-center">
                     <a href="index.html" class="text-primary-600 font-bold transition">Home</a>
                     <a href="about.html" class="text-gray-600 hover:text-primary-600 font-medium transition">About</a>
                     <a href="products.html"
@@ -69,9 +70,43 @@
                         class="px-5 py-2.5 rounded-full bg-primary-700 text-white font-medium hover:bg-primary-800 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Contact
                         Us</a>
                 </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-primary-800 hover:text-primary-600 focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-primary-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-4 pb-6 space-y-3 flex flex-col">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-primary-700 font-bold bg-primary-50">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-gray-600 hover:text-primary-600 hover:bg-primary-50 font-medium">About</a>
+                <a href="products.html"
+                    class="block px-3 py-2 rounded-md text-gray-600 hover:text-primary-600 hover:bg-primary-50 font-medium">Products</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-gray-600 hover:text-primary-600 hover:bg-primary-50 font-medium">Contact
+                    Us</a>
             </div>
         </div>
     </nav>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
     <!-- Hero Section -->
     <section class="relative h-[600px] flex items-center justify-center overflow-hidden">
@@ -149,42 +184,58 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-primary-900 mt-2">Premium Exports</h2>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
-                    <div class="h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1578428295193-be8ecc768ea5?q=80&w=735"
-                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-                            alt="Spices">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-primary-900">Assorted Spices</h3>
-                        <a href="products.html" class="text-primary-600 text-sm font-bold mt-2 inline-block">View
-                            Details &rarr;</a>
-                    </div>
-                </div>
-                <!-- Card 2 -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1: Onions -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
                     <div class="h-56 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=800&q=80"
                             class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-                            alt="Red Onions">
+                            alt="Onions">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-primary-900">Fresh Red Onions</h3>
+                    <div class="p-5 text-center">
+                        <h3 class="text-lg font-bold text-primary-900">Onions</h3>
                         <a href="products.html" class="text-primary-600 text-sm font-bold mt-2 inline-block">View
                             Details &rarr;</a>
                     </div>
                 </div>
-                <!-- Card 3 -->
+
+                <!-- Card 2: Grapes -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
                     <div class="h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1676619357571-b4f086f81299?q=80&w=687"
+                        <img src="assets/grapes.png"
                             class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-                            alt="Seeds">
+                            alt="Grapes">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-primary-900">Cumin Seeds</h3>
+                    <div class="p-5 text-center">
+                        <h3 class="text-lg font-bold text-primary-900">Grapes</h3>
+                        <a href="products.html" class="text-primary-600 text-sm font-bold mt-2 inline-block">View
+                            Details &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Green Chillies -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="assets/green_chillies.png"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Green Chillies">
+                    </div>
+                    <div class="p-5 text-center">
+                        <h3 class="text-lg font-bold text-primary-900">Green Chillies</h3>
+                        <a href="products.html" class="text-primary-600 text-sm font-bold mt-2 inline-block">View
+                            Details &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Capsicum -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="assets/capsicum.png"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Capsicum">
+                    </div>
+                    <div class="p-5 text-center">
+                        <h3 class="text-lg font-bold text-primary-900">Capsicum</h3>
                         <a href="products.html" class="text-primary-600 text-sm font-bold mt-2 inline-block">View
                             Details &rarr;</a>
                     </div>
