@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Sambhav Exporter</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#FBF6F1',
+                            100: '#F3E6D9',
+                            200: '#E6CDB4',
+                            300: '#D7B089',
+                            400: '#C89A3D',
+                            500: '#B07A2A',
+                            600: '#8F5F22',
+                            700: '#6F471C',
+                            800: '#4B2E21',
+                            900: '#362015',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-primary-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-primary-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center group">
+                    <img src="assets/logo.png" alt="Logo"
+                        class="h-12 w-12 rounded-full object-cover shadow-md group-hover:scale-105 transition">
+                    <div class="ml-3">
+                        <div class="text-xl font-bold text-primary-800 leading-none">SAMBHAV</div>
+                        <div class="text-xs text-primary-600 tracking-[0.2em] font-medium mt-1">EXPORTER</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary-600 font-medium transition">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary-600 font-medium transition">About</a>
+                    <a href="products.html" class="text-primary-600 font-bold transition">Products</a>
+                    <a href="contact.html"
+                        class="px-5 py-2.5 rounded-full bg-primary-700 text-white font-medium hover:bg-primary-800 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Contact
+                        Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="pt-32 pb-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <span class="text-primary-600 font-bold uppercase tracking-wider text-sm">Our Collections</span>
+            <h1 class="text-4xl md:text-5xl font-black text-primary-900 mt-2">Premium Exports</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <section class="pb-24 bg-primary-50 pt-12">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Product Card 1 -->
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-2 transition duration-300 group">
+                        <div class="h-64 overflow-hidden relative">
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary-800 z-10">
+                                SPICES</div>
+                            <img src="https://images.unsplash.com/photo-1578428295193-be8ecc768ea5?q=80&w=735"
+                                alt="Spices"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary-900 mb-2">Assorted Spices</h3>
+                            <p class="text-gray-600 text-sm mb-4">Premium blend of aromatic spices sourced from the
+                                finest farms.</p>
+                            <a href="contact.html" class="text-primary-600 font-bold text-sm hover:underline">Inquire
+                                Now &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-2 transition duration-300 group">
+                        <div class="h-64 overflow-hidden relative">
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary-800 z-10">
+                                VEGETABLES</div>
+                            <img src="https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=800&q=80"
+                                alt="Red Onions"
+                                class="w-full h-full object-cover group-hover:scale-100 transition duration-700">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary-900 mb-2">Fresh Red Onions</h3>
+                            <p class="text-gray-600 text-sm mb-4">Farm-fresh red onions known for their pungency and
+                                quality.</p>
+                            <a href="contact.html" class="text-primary-600 font-bold text-sm hover:underline">Inquire
+                                Now &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-2 transition duration-300 group">
+                        <div class="h-64 overflow-hidden relative">
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary-800 z-10">
+                                SEEDS</div>
+                            <img src="https://images.unsplash.com/photo-1676619357571-b4f086f81299?q=80&w=687"
+                                alt="Cumin"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary-900 mb-2">Cumin Seeds</h3>
+                            <p class="text-gray-600 text-sm mb-4">Pure, earthy cumin seeds with intense aroma and
+                                flavor.</p>
+                            <a href="contact.html" class="text-primary-600 font-bold text-sm hover:underline">Inquire
+                                Now &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 text-white py-12 border-t border-primary-800">
+        <div
+            class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center text-sm text-primary-300">
+            <div class="flex items-center gap-2 mb-4 md:mb-0">
+                <div class="font-bold text-white text-lg">SAMBHAV</div>
+                <span class="tracking-widest text-xs uppercase">Exporter</span>
+            </div>
+            <div>
+                &copy; 2024 Sambhav Exporter. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
