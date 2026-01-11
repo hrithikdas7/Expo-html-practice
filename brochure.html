@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Brochure - Sambhav Exports</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f1fdf6',
+                            100: '#dff7ec',
+                            200: '#b8ecd9',
+                            300: '#86dfbf',
+                            400: '#4ecfa1',
+                            500: '#1fa97a',
+                            600: '#178a64',
+                            700: '#126f52',
+                            800: '#0f5b44',
+                            900: '#0c4a38',
+                            950: '#052e23',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Print-specific setup */
+        @page {
+            size: A4;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media print {
+
+            html,
+            body {
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+
+            .page {
+                width: 210mm;
+                height: 297mm;
+                position: relative;
+                overflow: hidden;
+                page-break-after: always;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                background-color: white !important;
+                margin: 0;
+                padding: 0;
+                border: none !important;
+                box-shadow: none !important;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            /* Ensure efficient use of space */
+            h1,
+            h2,
+            h3,
+            p {
+                break-inside: avoid;
+            }
+        }
+
+        /* Screen preview setup */
+        @media screen {
+            body {
+                background-color: #f3f4f6;
+                padding: 2rem 0;
+            }
+
+            .page {
+                width: 210mm;
+                height: 297mm;
+                margin: 0 auto 2rem auto;
+                background: white;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+                position: relative;
+                overflow: hidden;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 antialiased">
+
+    <!-- Controls -->
+    <div class="fixed top-4 right-4 z-50 no-print flex gap-4">
+        <button onclick="window.print()"
+            class="bg-primary-700 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-primary-800 transition flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+            </svg>
+            Save as PDF / Print
+        </button>
+        <a href="index.html"
+            class="bg-white text-gray-700 px-6 py-3 rounded-full font-bold shadow-md hover:bg-gray-100 transition border border-gray-200">
+            Back to Website
+        </a>
+    </div>
+
+    <!-- Page 1: Cover -->
+    <div class="page bg-primary-50 flex flex-col justify-between">
+        <!-- Decoration -->
+        <div
+            class="absolute top-0 right-0 w-[400px] h-[400px] bg-primary-200/40 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-green-200/40 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none">
+        </div>
+
+        <div class="relative z-10 px-12 pt-16 text-center">
+            <img src="assets/logo.png" alt="Sambhav Exports" class="h-32 mx-auto mb-6 object-contain">
+            <h1 class="text-5xl font-bold text-primary-900 tracking-tight">SAMBHAV EXPORTS</h1>
+            <p class="text-base text-primary-600 tracking-[0.4em] font-bold uppercase mt-3">Sourcing Nature, Delivering
+                Trust</p>
+        </div>
+
+        <div class="relative z-10 px-12 my-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-6xl font-black text-primary-900 leading-[1.1] mb-8">
+                    Premium Indian Agriculture <br>
+                    <span class="text-primary-600">Exported Globally</span>
+                </h2>
+                <p class="text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Specializing in Red Onions, Fresh Fruits, Spices, and Grains.
+                    Merging traditional farming with modern export excellence.
+                </p>
+            </div>
+
+            <div class="relative w-full h-[320px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white mt-8">
+                <img src="https://images.unsplash.com/photo-1604328698692-f76ea9498e76?q=80&w=1470"
+                    class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div class="absolute bottom-6 left-6 text-white text-left">
+                    <p class="font-bold text-lg">Since 1970</p>
+                    <p class="text-sm opacity-90">Three Generations of Experience</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-10 bg-primary-900 text-white p-8 justify-between flex items-center">
+            <div class="text-lg font-medium tracking-wide">
+                www.sambhavexports.com
+            </div>
+            <div class="text-lg font-medium tracking-wide">
+                +971 56 862 0169
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2: About & Certifications - Compacted -->
+    <!-- Page 2: About & Certifications - Compacted -->
+    <div class="page bg-white p-12 flex flex-col justify-between">
+        <div class="flex-grow flex flex-col justify-start">
+            <!-- Header -->
+            <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-4">
+                <div class="w-12 h-1 bg-primary-600"></div>
+                <h2 class="text-4xl font-bold text-primary-900 uppercase tracking-wide">Who We Are</h2>
+            </div>
+
+            <!-- Content Row -->
+            <div class="flex gap-10 mb-8 items-stretch">
+                <div class="w-7/12 text-justify flex flex-col justify-center">
+                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                        <span class="text-primary-700 font-bold text-2xl">Sambhav Exports</span> stands on a legacy of
+                        over
+                        50 years in Indian agriculture. Starting as family-run onion cultivators in Nashik, we have
+                        evolved
+                        into a dynamic export house connecting Indian farmers to the world.
+                    </p>
+                    <p class="text-xl text-gray-700 leading-relaxed">
+                        Our deep-rooted experience allows us to identify the finest quality produce directly at the
+                        source.
+                        We handle every step—from procurement and grading to packaging and logistics—ensuring our
+                        clients
+                        receive only the freshest, export-grade products.
+                    </p>
+                </div>
+                <div class="w-5/12">
+                    <div class="h-full min-h-[300px] w-full rounded-2xl overflow-hidden shadow-lg relative">
+                        <img src="assets/about.png" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-primary-900/10"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="grid grid-cols-3 gap-6 mb-10">
+                <div class="bg-primary-50 p-4 rounded-xl text-center border border-primary-100">
+                    <div class="text-5xl font-black text-primary-600">50+</div>
+                    <div class="text-sm uppercase font-bold text-gray-600 mt-2">Years Legacy</div>
+                </div>
+                <div class="bg-primary-50 p-4 rounded-xl text-center border border-primary-100">
+                    <div class="text-4xl font-black text-primary-600">Premium</div>
+                    <div class="text-sm uppercase font-bold text-gray-600 mt-2">Quality Sourcing</div>
+                </div>
+                <div class="bg-primary-50 p-4 rounded-xl text-center border border-primary-100">
+                    <div class="text-4xl font-black text-primary-600">Global</div>
+                    <div class="text-sm uppercase font-bold text-gray-600 mt-2">Export Standards</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <div>
+            <div class="flex items-center gap-4 mb-6 border-b border-gray-100 pb-2">
+                <div class="w-12 h-1 bg-primary-600"></div>
+                <h2 class="text-4xl font-bold text-primary-900 uppercase tracking-wide">Certifications</h2>
+            </div>
+
+            <div class="grid grid-cols-3 gap-5">
+                <!-- Cert Item -->
+                <div class="flex items-center gap-3 p-4 border border-gray-200 rounded-lg bg-gray-50/50">
+                    <img src="assets/iso_logo.png" class="h-14 w-14 object-contain">
+                    <span class="text-base font-bold text-gray-800 leading-tight">ISO 9001:2015</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-200 rounded-lg bg-gray-50/50">
+                    <img src="assets/emblem_logo.svg" class="h-14 w-14 object-contain">
+                    <span class="text-base font-bold text-gray-800 leading-tight">Govt Recognized</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-200 rounded-lg bg-gray-50/50">
+                    <img src="assets/fssai_logo.png" class="h-14 w-14 object-contain">
+                    <span class="text-base font-bold text-gray-800 leading-tight">FSSAI Certified</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-200 rounded-lg bg-gray-50/50">
+                    <img src="assets/msme_logo.svg" class="h-14 w-14 object-contain">
+                    <span class="text-base font-bold text-gray-800 leading-tight">MSME Reg.</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-200 rounded-lg bg-gray-50/50">
+                    <img src="assets/gst_logo.png" class="h-14 w-14 object-contain">
+                    <span class="text-base font-bold text-gray-800 leading-tight">GST Compliant</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 border border-gray-200 rounded-lg bg-gray-50/50">
+                    <img src="assets/emblem_logo.svg" class="h-14 w-14 object-contain">
+                    <span class="text-base font-bold text-gray-800 leading-tight">IEC Holder</span>
+                </div>
+            </div>
+
+            <!-- Footer footer for internal page -->
+            <div class="mt-8 pt-4 border-t border-gray-100 flex justify-between text-sm text-gray-400">
+                <span>Sambhav Exports - Company Profile</span>
+                <span>Page 02</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3: Product Showcase -->
+    <div class="page bg-white p-12 flex flex-col justify-between">
+        <div class="flex items-center gap-4 mb-4 border-b border-gray-100 pb-4">
+            <div class="w-12 h-1 bg-primary-600"></div>
+            <h2 class="text-4xl font-bold text-primary-900 uppercase tracking-wide">Our Collections</h2>
+        </div>
+
+        <div class="grid grid-cols-2 gap-x-8 gap-y-10 flex-grow content-between">
+            <!-- Product Item -->
+            <div class="flex gap-6 p-4 rounded-2xl border border-gray-100 bg-gray-50/50">
+                <div class="w-32 h-32 flex-shrink-0 bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=800&q=80"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-primary-800 leading-tight mb-2">Red Onions</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Available in 45mm+ to 60mm+ sizes. Excellent skin
+                        quality and pungency. Mesh bag packaging availability.</p>
+                </div>
+            </div>
+
+            <!-- Product Item -->
+            <div class="flex gap-6 p-4 rounded-2xl border border-gray-100 bg-gray-50/50">
+                <div class="w-32 h-32 flex-shrink-0 bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="assets/grapes.png" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-primary-800 leading-tight mb-2">Fresh Grapes</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Premium export quality Thompson & Sonaka varieties.
+                        Sweet, juicy, and physically inspected for quality.</p>
+                </div>
+            </div>
+
+            <!-- Product Item -->
+            <div class="flex gap-6 p-4 rounded-2xl border border-gray-100 bg-gray-50/50">
+                <div class="w-32 h-32 flex-shrink-0 bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="assets/green_chillies.png" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-primary-800 leading-tight mb-2">Green Chillies</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">G4 variety and others. Dark green, highly pungent,
+                        and
+                        fresh. Ideal for international cuisines.</p>
+                </div>
+            </div>
+
+            <!-- Product Item -->
+            <div class="flex gap-6 p-4 rounded-2xl border border-gray-100 bg-gray-50/50">
+                <div class="w-32 h-32 flex-shrink-0 bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="assets/capsicum.png" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-primary-800 leading-tight mb-2">Capsicum</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Fresh, firm, and shiny green capsicums. Uniform
+                        sizes
+                        suitable for supermarket displays.</p>
+                </div>
+            </div>
+
+            <!-- Product Item -->
+            <div class="flex gap-6 p-4 rounded-2xl border border-gray-100 bg-gray-50/50">
+                <div class="w-32 h-32 flex-shrink-0 bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="assets/makhana.png" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-primary-800 leading-tight mb-2">Makhana (Fox Nuts)</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Handpicked large size nuts. High protein,
+                        gluten-free
+                        snack. Processed naturally.</p>
+                </div>
+            </div>
+
+            <!-- Product Item -->
+            <div class="flex gap-6 p-4 rounded-2xl border border-gray-100 bg-gray-50/50">
+                <div class="w-32 h-32 flex-shrink-0 bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="assets/onion_powder.png" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-primary-800 leading-tight mb-2">Onion Powder</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Dehydrated red/white onion powder. Consistent
+                        flavor
+                        profile for industrial usage.</p>
+                </div>
+            </div>
+
+            <!-- Product Item -->
+            <div class="flex gap-6 p-4 rounded-2xl border border-gray-100 bg-gray-50/50">
+                <div class="w-32 h-32 flex-shrink-0 bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="assets/turmeric.png" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-primary-800 leading-tight mb-2">Turmeric</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">High curcumin content turmeric finger and powder.
+                        Sourced from organic belt regions.</p>
+                </div>
+            </div>
+
+            <!-- Product Item -->
+            <div class="flex gap-6 p-4 rounded-2xl border border-gray-100 bg-gray-50/50">
+                <div class="w-32 h-32 flex-shrink-0 bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="assets/rice.png" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-primary-800 leading-tight mb-2">Indian Rice</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Basmati and Non-Basmati varieties. Long grain,
+                        aromatic, and free from impurities.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 pt-4 border-t border-gray-100 flex justify-between text-sm text-gray-400">
+            <span>Sambhav Exports - Product Catalog</span>
+            <span>Page 03</span>
+        </div>
+    </div>
+
+    <!-- Page 4: Contact - High Contrast -->
+    <div class="page relative bg-primary-50 flex flex-col items-center justify-center overflow-hidden">
+        <!-- Decoration -->
+        <div
+            class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-200/50 rounded-full blur-[100px] pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-green-200/50 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="relative z-10 w-full max-w-3xl px-12 text-center">
+
+            <div class="mb-8">
+                <img src="assets/logo.png" class="h-24 mx-auto mb-6 object-contain">
+                <h2 class="text-6xl font-black text-primary-900 mb-6">READY TO PARTNER?</h2>
+                <p class="text-2xl text-gray-600 mb-12 font-light">
+                    We are available 24/7 to answer your queries and provide competitive quotations for your
+                    requirements.
+                </p>
+            </div>
+
+            <div class="bg-white shadow-xl rounded-3xl p-10 border border-gray-100 text-left relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-2 h-full bg-primary-600"></div>
+
+                <div class="grid grid-cols-1 gap-10">
+                    <div class="flex items-center gap-8">
+                        <div
+                            class="w-16 h-16 rounded-full bg-[#25D366] flex items-center justify-center text-white shrink-0 shadow-lg">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="text-sm uppercase font-bold text-gray-400 tracking-wider mb-1">Phone & WhatsApp
+                            </div>
+                            <div class="text-4xl font-black text-gray-800">+971 56 862 0169</div>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-100">
+
+                    <div class="flex items-center gap-8">
+                        <div
+                            class="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center text-white shrink-0 shadow-lg">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="text-sm uppercase font-bold text-gray-400 tracking-wider mb-1">Email Address
+                            </div>
+                            <div class="text-3xl font-bold text-gray-800">contact@sambhavexports.com</div>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-100">
+
+                    <div class="flex items-center gap-8">
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary-600 flex items-center justify-center text-white shrink-0 shadow-lg">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="text-sm uppercase font-bold text-gray-400 tracking-wider mb-1">Head Office</div>
+                            <div class="text-2xl font-medium text-gray-700 leading-snug">9, Shreeman Apartment, Pandit
+                                Colony,<br>Nashik, Maharashtra - 422002</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="absolute bottom-10 w-full text-center text-primary-300 text-xs font-bold tracking-[0.2em] uppercase">
+            © 2025 Sambhav Exports
+        </div>
+    </div>
+
+</body>
+
+</html>
